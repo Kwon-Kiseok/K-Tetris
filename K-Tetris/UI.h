@@ -21,9 +21,7 @@ enum class TEXT_COLOR
 	WHITE
 };
 
-class UI
-{
-};
-
 void TextColor(int foreground, int background);
-
+void SetUI();
+void gotoXY(int x, int y);
+void CursorView();

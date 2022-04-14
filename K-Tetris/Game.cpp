@@ -27,14 +27,16 @@ void Game::init()
     system(" mode con lines=36 cols=64");   // set console size
     SetConsoleTitle(L"K-Tetris");           // set console title
 
-    TextColor(static_cast<int>(TEXT_COLOR::RED), static_cast<int>(TEXT_COLOR::BLACK));
-    std::cout << "Init Game" << std::endl;
+    //TextColor(static_cast<int>(TEXT_COLOR::RED), static_cast<int>(TEXT_COLOR::BLACK));
+    //std::cout << "Init Game" << std::endl;
+    CursorView();
+    SetUI();
 }
 
 void Game::update()
 {
-    TextColor(static_cast<int>(TEXT_COLOR::CYAN), static_cast<int>(TEXT_COLOR::BLACK));
-    std::cout << "Update Game" << std::endl;
+    //TextColor(static_cast<int>(TEXT_COLOR::CYAN), static_cast<int>(TEXT_COLOR::BLACK));
+    //std::cout << "Update Game" << std::endl;
 
     int input = 0;
     std::cin >> input;
@@ -45,8 +47,10 @@ void Game::update()
 
 void Game::render()
 {
-    TextColor(static_cast<int>(TEXT_COLOR::LIGHTGREEN), static_cast<int>(TEXT_COLOR::BLACK));
-    std::cout << "Render Game" << std::endl;
+    //TextColor(static_cast<int>(TEXT_COLOR::LIGHTGREEN), static_cast<int>(TEXT_COLOR::BLACK));
+    //std::cout << "Render Game" << std::endl;
+
+    SetUI();
 }
 
 void Game::clean()
