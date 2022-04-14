@@ -24,11 +24,16 @@ void Game::DestroyInstance()
 
 void Game::init()
 {
+    system(" mode con lines=36 cols=64");   // set console size
+    SetConsoleTitle(L"K-Tetris");           // set console title
+
+    TextColor(static_cast<int>(TEXT_COLOR::RED), static_cast<int>(TEXT_COLOR::BLACK));
     std::cout << "Init Game" << std::endl;
 }
 
 void Game::update()
 {
+    TextColor(static_cast<int>(TEXT_COLOR::CYAN), static_cast<int>(TEXT_COLOR::BLACK));
     std::cout << "Update Game" << std::endl;
 
     int input = 0;
@@ -40,11 +45,13 @@ void Game::update()
 
 void Game::render()
 {
+    TextColor(static_cast<int>(TEXT_COLOR::LIGHTGREEN), static_cast<int>(TEXT_COLOR::BLACK));
     std::cout << "Render Game" << std::endl;
 }
 
 void Game::clean()
 {
+    TextColor(static_cast<int>(TEXT_COLOR::DARKGRAY), static_cast<int>(TEXT_COLOR::WHITE));
     std::cout << "Cleaning Game" << std::endl;
     this->DestroyInstance();
 }

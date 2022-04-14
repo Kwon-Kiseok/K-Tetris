@@ -4,7 +4,7 @@
 class Game
 {
 private:
-	Game() {};
+	Game() : bRunning(true) {};
 	Game(const Game& copy);
 	~Game() {};
 
