@@ -1,5 +1,6 @@
 #include "stdafx.h"
 #include "Game.h"
+#include "UI.h"
 
 Game* Game::instance = nullptr;
 
@@ -27,15 +28,15 @@ void Game::init()
     system(" mode con lines=36 cols=64");   // set console size
     SetConsoleTitle(L"K-Tetris");           // set console title
 
-    //TextColor(static_cast<int>(TEXT_COLOR::RED), static_cast<int>(TEXT_COLOR::BLACK));
+    //SetColor(static_cast<int>(OBJECT_COLOR::RED), static_cast<int>(OBJECT_COLOR::BLACK));
     //std::cout << "Init Game" << std::endl;
     CursorView();
-    SetUI();
+    SetScoreBoardUI();
 }
 
 void Game::update()
 {
-    //TextColor(static_cast<int>(TEXT_COLOR::CYAN), static_cast<int>(TEXT_COLOR::BLACK));
+    //SetColor(static_cast<int>(OBJECT_COLOR::CYAN), static_cast<int>(OBJECT_COLOR::BLACK));
     //std::cout << "Update Game" << std::endl;
 
     int input = 0;
@@ -47,15 +48,20 @@ void Game::update()
 
 void Game::render()
 {
-    //TextColor(static_cast<int>(TEXT_COLOR::LIGHTGREEN), static_cast<int>(TEXT_COLOR::BLACK));
+    //SetColor(static_cast<int>(OBJECT_COLOR::LIGHTGREEN), static_cast<int>(OBJECT_COLOR::BLACK));
     //std::cout << "Render Game" << std::endl;
 
-    SetUI();
+    SetScoreBoardUI();
+}
+
+void Game::handleEvents()
+{
+    // 이벤트 타입 별로 받아줌
 }
 
 void Game::clean()
 {
-    TextColor(static_cast<int>(TEXT_COLOR::DARKGRAY), static_cast<int>(TEXT_COLOR::WHITE));
+    SetColor(OBJECT_COLOR::DARKGRAY, OBJECT_COLOR::WHITE);
     std::cout << "Cleaning Game" << std::endl;
     this->DestroyInstance();
 }

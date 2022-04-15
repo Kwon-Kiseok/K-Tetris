@@ -1,0 +1,22 @@
+#pragma once
+enum class OBJECT_COLOR
+{
+	BLACK,
+	BLUE,
+	GREEN,
+	CYAN,
+	RED,
+	MAGENTA,
+	BROWN,
+	LIGHTGRAY,
+	DARKGRAY,
+	LIGHTBLUE,
+	LIGHTGREEN,
+	LIGHTCYAN,
+	LIGHTRED,
+	LIGHTMAGENTA,
+	YELLOW,
+	WHITE
+};
+
+void SetColor(OBJECT_COLOR foreground, OBJECT_COLOR background);
