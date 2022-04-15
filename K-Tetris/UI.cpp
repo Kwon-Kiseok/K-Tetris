@@ -3,19 +3,17 @@
 
 using std::cout;
 
-void TextColor(int foreground, int background)
-{
-	int color = foreground + background * 16;
-	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), color);
-}
-
-void SetUI()
+void SetScoreBoardUI()
 {
 	// 36 * 64
 
+	SetColor(OBJECT_COLOR::MAGENTA, OBJECT_COLOR::BLACK);
 	gotoXY(4, 1); cout << "NEXT";
+	SetColor(OBJECT_COLOR::GREEN, OBJECT_COLOR::WHITE);
 	gotoXY(55, 1); cout << "SCORE";
+	SetColor(OBJECT_COLOR::LIGHTBLUE, OBJECT_COLOR::WHITE);
 	gotoXY(55, 8); cout << "LINES";
+	SetColor(OBJECT_COLOR::LIGHTGRAY, OBJECT_COLOR::WHITE);
 	gotoXY(55, 15); cout << "LEVLE";
 }
 

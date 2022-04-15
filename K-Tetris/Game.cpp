@@ -1,11 +1,13 @@
 #include "stdafx.h"
 #include "Game.h"
+#include "UI.h"
+#include "SceneManager.h"
 
 Game* Game::instance = nullptr;
 
 Game* Game::GetInstance()
 {
-    if (!instance)
+    if (nullptr == instance)
     {
         instance = new Game();
     }
@@ -27,37 +29,31 @@ void Game::init()
     system(" mode con lines=36 cols=64");   // set console size
     SetConsoleTitle(L"K-Tetris");           // set console title
 
-    //TextColor(static_cast<int>(TEXT_COLOR::RED), static_cast<int>(TEXT_COLOR::BLACK));
-    //std::cout << "Init Game" << std::endl;
     CursorView();
-    SetUI();
+
+    SceneManager::GetInstance()->LoadScene(0);
 }
 
 void Game::update()
 {
-    //TextColor(static_cast<int>(TEXT_COLOR::CYAN), static_cast<int>(TEXT_COLOR::BLACK));
-    //std::cout << "Update Game" << std::endl;
+    UpdateInput();
 
-    int input = 0;
-    std::cin >> input;
-    if (input == 0)
-        bRunning = false;
-    
 }
 
 void Game::render()
 {
-    //TextColor(static_cast<int>(TEXT_COLOR::LIGHTGREEN), static_cast<int>(TEXT_COLOR::BLACK));
-    //std::cout << "Render Game" << std::endl;
+}
 
-    SetUI();
+void Game::handleEvents()
+{
 }
 
 void Game::clean()
 {
-    TextColor(static_cast<int>(TEXT_COLOR::DARKGRAY), static_cast<int>(TEXT_COLOR::WHITE));
+    SetColor(OBJECT_COLOR::DARKGRAY, OBJECT_COLOR::WHITE);
     std::cout << "Cleaning Game" << std::endl;
     this->DestroyInstance();
+    SceneManager::DestroyInstance();
 }
 
 bool Game::CheckGameRunning()
