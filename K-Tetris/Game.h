@@ -3,13 +3,13 @@
 class Game
 {
 private:
-	Game() : bRunning(true) {};
-	Game(const Game& copy);
+	Game() : bRunning(true), bPlaying(false) {};
 	~Game() {};
 
 	static Game* instance;
 
 	bool bRunning;
+	bool bPlaying;
 public:
 	static Game* GetInstance();
 	static void DestroyInstance();

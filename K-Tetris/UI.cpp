@@ -7,7 +7,7 @@ void SetScoreBoardUI()
 {
 	// 36 * 64
 
-	SetColor(OBJECT_COLOR::MAGENTA, OBJECT_COLOR::WHITE);
+	SetColor(OBJECT_COLOR::MAGENTA, OBJECT_COLOR::BLACK);
 	gotoXY(4, 1); cout << "NEXT";
 	SetColor(OBJECT_COLOR::GREEN, OBJECT_COLOR::WHITE);
 	gotoXY(55, 1); cout << "SCORE";
