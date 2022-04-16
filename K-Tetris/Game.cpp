@@ -31,13 +31,13 @@ void Game::init()
 
     CursorView();
 
-    SceneManager::GetInstance()->LoadScene(0);
+    SceneManager::GetInstance()->LoadScene(SCENE_TYPE::MENU_SCENE);
 }
 
 void Game::update()
 {
     UpdateInput();
-
+    SceneManager::GetInstance()->pScene->UpdateScene();
 }
 
 void Game::render()

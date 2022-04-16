@@ -3,7 +3,7 @@
 
 using std::cout;
 
-void SetScoreBoardUI()
+void DrawScoreBoardUI()
 {
 	// 36 * 64
 

@@ -1,11 +1,11 @@
 #pragma once
 #include "Scene.h"
 
-class MenuScene : public Scene
+class PlayScene : public Scene
 {
 public:
-	MenuScene() {}
-	~MenuScene() {}
+	PlayScene() {}
+	~PlayScene() {}
 	virtual void UpdateScene();
 	virtual void DrawScene();
 };
