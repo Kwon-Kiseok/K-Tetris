@@ -144,6 +144,13 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Block.h" />
+    <ClInclude Include="Block_I.h" />
+    <ClInclude Include="Block_J.h" />
+    <ClInclude Include="Block_L.h" />
+    <ClInclude Include="Block_O.h" />
+    <ClInclude Include="Block_S.h" />
+    <ClInclude Include="Block_T.h" />
+    <ClInclude Include="Block_Z.h" />
     <ClInclude Include="Color.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="GameObject.h" />
@@ -158,6 +165,13 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Block.cpp" />
+    <ClCompile Include="Block_I.cpp" />
+    <ClCompile Include="Block_J.cpp" />
+    <ClCompile Include="Block_L.cpp" />
+    <ClCompile Include="Block_O.cpp" />
+    <ClCompile Include="Block_S.cpp" />
+    <ClCompile Include="Block_T.cpp" />
+    <ClCompile Include="Block_Z.cpp" />
     <ClCompile Include="Color.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="GameObject.cpp" />

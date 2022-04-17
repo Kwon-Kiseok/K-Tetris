@@ -19,3 +19,23 @@ GameObject& GameObject::operator=(const GameObject& ref)
 	return *this;
 }
 
+int GameObject::getXpos()
+{
+	return xpos;
+}
+
+int GameObject::getYpos()
+{
+	return ypos;
+}
+
+int GameObject::setXpos(int x)
+{
+	return xpos = x;
+}
+
+int GameObject::setYpos(int y)
+{
+	return ypos = y;
+}
+

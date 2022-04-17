@@ -13,14 +13,14 @@ void TetrisMap::InitMap()
 		{
 			if (i == MAX_ROW + 1)
 			{
-				map[i][j] = L'¢Ì';
+				map[i][j] = 2;
 			}
 			else
 			{
 				if (j == 0 || j == MAX_COL + 1)
-					map[i][j] = L'¢Ì';
+					map[i][j] = 2;
 				else
-					map[i][j] = L' ';
+					map[i][j] = 0;
 			}
 
 		}
@@ -37,7 +37,12 @@ void TetrisMap::DrawMap()
 	{
 		for (int j = 0; j < MAX_COL + 2; ++j)
 		{
-			std::wcout << map[i][j];
+			if (map[i][j] == 2)
+				std::wcout << L"¢Ì";
+			else if (map[i][j] == 1)
+				std::wcout << L"¡á";
+			else
+				std::cout << "  ";
 			xpos+=2;
 			gotoXY(xpos, ypos);
 		}
@@ -45,4 +50,14 @@ void TetrisMap::DrawMap()
 		ypos++;
 		gotoXY(xpos, ypos);
 	}
+}
+
+int TetrisMap::setMap(int xpos, int ypos, int symbol)
+{
+	return map[ypos][xpos] = symbol;
+}
+
+int TetrisMap::getMap(int xpos, int ypos)
+{
+	return map[ypos][xpos];
 }

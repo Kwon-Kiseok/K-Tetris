@@ -7,7 +7,7 @@
 class TetrisMap : public GameObject
 {
 private:
-	wchar_t map[MAX_ROW+2][MAX_COL+2];
+	int map[MAX_ROW+2][MAX_COL+2];
 
 public:
 	TetrisMap() : map() {}
@@ -15,5 +15,7 @@ public:
 
 	void InitMap();
 	void DrawMap();
+	int setMap(int xpos, int ypos, int symbol);
+	int getMap(int xpos, int ypos);
 };
 
