@@ -2,7 +2,7 @@
 
 class GameObject
 {
-private:
+protected:
 	int xpos;
 	int ypos;
 

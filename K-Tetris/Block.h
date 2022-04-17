@@ -15,7 +15,7 @@ enum class BLOCK_TYPE
 
 class Block : public GameObject
 {
-private:
+protected:
 	BLOCK_TYPE type;
 	OBJECT_COLOR color;
 public:

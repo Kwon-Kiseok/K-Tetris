@@ -1,6 +1,6 @@
 #pragma once
 
-#define ESC 59
+#define ESC 27
 #define ENTER 13
 
 typedef enum class KeyCode

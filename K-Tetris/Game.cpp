@@ -60,3 +60,8 @@ bool Game::CheckGameRunning()
 {
     return bRunning;
 }
+
+void Game::SetGameRunning()
+{
+    bRunning = !bRunning;
+}

@@ -8,5 +8,7 @@ public:
 	~PlayScene() {}
 	virtual void UpdateScene();
 	virtual void DrawScene();
+
+	void CheckGameEnd();
 };
 
