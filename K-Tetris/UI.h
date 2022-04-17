@@ -1,5 +1,5 @@
 #pragma once
 
-void SetScoreBoardUI();
+void DrawScoreBoardUI();
 void gotoXY(int x, int y);
 void CursorView();

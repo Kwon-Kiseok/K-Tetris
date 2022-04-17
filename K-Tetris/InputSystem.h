@@ -1,9 +1,11 @@
 #pragma once
 
-#define ESC 59
+#define ESC 27
+#define ENTER 13
 
 typedef enum class KeyCode
 {
+    KEYCODE_ENTER = ENTER,
 	KEYCODE_W = 'W',
     KEYCODE_A = 'A',
     KEYCODE_S = 'S',

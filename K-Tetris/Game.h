@@ -20,4 +20,5 @@ public:
 	void handleEvents();
 	void clean();	// 종료 전 정보 초기화
 	bool CheckGameRunning();	// 게임 종료 체크
+	void SetGameRunning();
 };

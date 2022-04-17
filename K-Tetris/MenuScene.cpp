@@ -1,9 +1,18 @@
 #include "stdafx.h"
+#include "SceneManager.h"
 #include "MenuScene.h"
 #include "UI.h"
 
 using std::cout;
-using std::endl;
+
+void MenuScene::UpdateScene()
+{
+	// "PRESS ANY KEY TO START" Fliker
+	if (GetButtonDown(EKeyCode::KEYCODE_ENTER))
+	{
+		SceneManager::GetInstance()->LoadScene(SCENE_TYPE::PLAYING_SCENE);
+	}
+}
 
 void MenuScene::DrawScene()
 {
@@ -109,8 +118,8 @@ void MenuScene::DrawScene()
 	gotoXY(52, 28); cout << "    ¡á";
 	gotoXY(52, 29); cout << "¡á¡á¡á";
 
-	gotoXY(20, 32); cout << "PRESS ANY KEY TO START";
+	gotoXY(20, 32); cout << "PRESS ENTER KEY TO START";
 
 	// Copyright
-	gotoXY(21, 35); cout << "¨Ï 2022 KWON KISEOK";
+	gotoXY(23, 35); cout << "¨Ï 2022 KWON KISEOK";
 }

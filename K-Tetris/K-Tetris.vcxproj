@@ -144,30 +144,48 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Block.h" />
+    <ClInclude Include="Block_I.h" />
+    <ClInclude Include="Block_J.h" />
+    <ClInclude Include="Block_L.h" />
+    <ClInclude Include="Block_O.h" />
+    <ClInclude Include="Block_S.h" />
+    <ClInclude Include="Block_T.h" />
+    <ClInclude Include="Block_Z.h" />
     <ClInclude Include="Color.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="GameObject.h" />
     <ClInclude Include="InputSystem.h" />
     <ClInclude Include="MenuScene.h" />
+    <ClInclude Include="PlayScene.h" />
     <ClInclude Include="Scene.h" />
     <ClInclude Include="SceneManager.h" />
     <ClInclude Include="stdafx.h" />
+    <ClInclude Include="TetrisMap.h" />
     <ClInclude Include="UI.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Block.cpp" />
+    <ClCompile Include="Block_I.cpp" />
+    <ClCompile Include="Block_J.cpp" />
+    <ClCompile Include="Block_L.cpp" />
+    <ClCompile Include="Block_O.cpp" />
+    <ClCompile Include="Block_S.cpp" />
+    <ClCompile Include="Block_T.cpp" />
+    <ClCompile Include="Block_Z.cpp" />
     <ClCompile Include="Color.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="GameObject.cpp" />
     <ClCompile Include="InputSystem.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MenuScene.cpp" />
+    <ClCompile Include="PlayScene.cpp" />
     <ClCompile Include="Scene.cpp" />
     <ClCompile Include="SceneManager.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="TetrisMap.cpp" />
     <ClCompile Include="UI.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

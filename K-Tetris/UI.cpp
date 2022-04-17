@@ -3,17 +3,17 @@
 
 using std::cout;
 
-void SetScoreBoardUI()
+void DrawScoreBoardUI()
 {
 	// 36 * 64
 
 	SetColor(OBJECT_COLOR::MAGENTA, OBJECT_COLOR::BLACK);
 	gotoXY(4, 1); cout << "NEXT";
-	SetColor(OBJECT_COLOR::GREEN, OBJECT_COLOR::WHITE);
+	SetColor(OBJECT_COLOR::GREEN, OBJECT_COLOR::BLACK);
 	gotoXY(55, 1); cout << "SCORE";
-	SetColor(OBJECT_COLOR::LIGHTBLUE, OBJECT_COLOR::WHITE);
+	SetColor(OBJECT_COLOR::LIGHTBLUE, OBJECT_COLOR::BLACK);
 	gotoXY(55, 8); cout << "LINES";
-	SetColor(OBJECT_COLOR::LIGHTGRAY, OBJECT_COLOR::WHITE);
+	SetColor(OBJECT_COLOR::LIGHTGRAY, OBJECT_COLOR::BLACK);
 	gotoXY(55, 15); cout << "LEVLE";
 }
 

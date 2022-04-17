@@ -1,6 +1,7 @@
 #include "stdafx.h"
 #include "SceneManager.h"
 #include "MenuScene.h"
+#include "PlayScene.h"
 
 SceneManager* SceneManager::instance = nullptr;
 
@@ -23,28 +24,36 @@ void SceneManager::DestroyInstance()
     instance = nullptr;
 }
 
-void SceneManager::LoadScene(int scene)
+void SceneManager::LoadScene(SCENE_TYPE type)
 {
-    sceneNumber = scene;
+    sceneType = type;
     ClearScene();
-    switch (sceneNumber)
+
+    switch (sceneType)
     {
-    case 0:
+    case SCENE_TYPE::MENU_SCENE:
     {
-        MenuScene menuScene;
-        menuScene.DrawScene();
+        pScene = new MenuScene();
     }
         break;
-    case 1:
+    case SCENE_TYPE::PLAYING_SCENE:
+    {
+        pScene = new PlayScene();
+    }
+        break;
+    default:
         break;
     }
-
-    
-
-
+    pScene->DrawScene();
 }
 
 void SceneManager::ClearScene()
 {
     system("cls");
+
+    if (nullptr != pScene)
+    {
+        delete pScene;
+        pScene = nullptr;
+    }
 }

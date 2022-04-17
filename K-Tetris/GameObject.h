@@ -2,7 +2,7 @@
 
 class GameObject
 {
-private:
+protected:
 	int xpos;
 	int ypos;
 
@@ -13,5 +13,9 @@ public:
 	virtual ~GameObject();
 
 	GameObject& operator=(const GameObject& ref);
+	virtual int getXpos();
+	virtual int getYpos();
+	virtual int setXpos(int x);
+	virtual int setYpos(int y);
 };
 
