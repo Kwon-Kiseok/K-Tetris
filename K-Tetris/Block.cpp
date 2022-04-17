@@ -43,6 +43,7 @@ void Block::Render(TetrisMap *map, int screen_x, int screen_y)
 		{
 			if (map != nullptr)
 			{
+				//
 				if (map->getMap(i, j) == 1)
 				{
 					map->setMap(i, j, 0);
