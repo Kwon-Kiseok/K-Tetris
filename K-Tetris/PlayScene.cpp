@@ -10,7 +10,7 @@ void PlayScene::UpdateScene()
 {
 	end = clock();
 	ftime = ((float)(end - start) / CLOCKS_PER_SEC);
-	if (ftime >= 0.2)
+	if (ftime >= 1.0)
 	{
 		if (nullptr != blockObject)
 		{
@@ -50,6 +50,7 @@ void PlayScene::UpdateScene()
 	
 	// -> 매 프레임 맵 배열을 전체 체크하면서
 	// -> 블럭들이 채워졌다면 해당 행 지워주고 내려주는 식으로
+	tMap->DeleteLinear();
 	tMap->DrawMap();
 }
 
@@ -128,17 +129,23 @@ void PlayScene::CheckKeyInput()
 	Block collisionCheckBlock = *blockObject;
 	
 	// 키 입력
-	if (GetButtonDown(EKeyCode::KEYCODE_A))
+	if (GetButton(EKeyCode::KEYCODE_A) || GetButtonDown(EKeyCode::KEYCODE_A))
 	{
 		collisionCheckBlock.MoveLeft();
 		if(collisionCheckBlock.CheckCollision(tMap, collisionCheckBlock.getXpos(), collisionCheckBlock.getYpos()))
 			blockObject->MoveLeft();
 	}
-	else if (GetButtonDown(EKeyCode::KEYCODE_D))
+	else if (GetButton(EKeyCode::KEYCODE_D) || GetButtonDown(EKeyCode::KEYCODE_D))
 	{
 		collisionCheckBlock.MoveRight();
 		if (collisionCheckBlock.CheckCollision(tMap, collisionCheckBlock.getXpos(), collisionCheckBlock.getYpos()))
 			blockObject->MoveRight();
+	}
+	else if (GetButton(EKeyCode::KEYCODE_S) || GetButtonDown(EKeyCode::KEYCODE_S))
+	{
+		collisionCheckBlock.MoveDown();
+		if (collisionCheckBlock.CheckCollision(tMap, collisionCheckBlock.getXpos(), collisionCheckBlock.getYpos()))
+			blockObject->MoveDown();
 	}
 	else if (GetButtonDown(EKeyCode::KEYCODE_R))
 	{
