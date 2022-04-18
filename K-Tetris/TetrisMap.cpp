@@ -39,7 +39,7 @@ void TetrisMap::DrawMap()
 		{
 			if (map[i][j] == 2)
 				std::wcout << L"в╠";
-			else if (map[i][j] == 1)
+			else if (map[i][j] == 1 || map[i][j] == 3)
 				std::wcout << L"бс";
 			else
 				std::cout << "  ";

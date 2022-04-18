@@ -217,6 +217,7 @@ public:
 	virtual ~Block();
 
 	virtual int getShape(int rotate_count, int x, int y);
+	virtual int getRotateCount();
 	virtual void Rotate();
 	virtual void MoveDown();
 	virtual void MoveLeft();

@@ -15,6 +15,11 @@ int Block::getShape(int rotate_count, int x, int y)
 	return shape[rotate_count][y][x];
 }
 
+int Block::getRotateCount()
+{
+	return rotate_count;
+}
+
 void Block::Rotate()
 {
 	rotate_count = (rotate_count + 1) % 4;
@@ -87,7 +92,7 @@ bool Block::CheckCollision(TetrisMap* map, int x, int y)
 
 			if (blockElem != 1)
 				continue;
-			if (map->getMap(X, Y) == 2)
+			if (map->getMap(X, Y) == 2 || map->getMap(X, Y) == 3)
 				return false;
 		}
 	}

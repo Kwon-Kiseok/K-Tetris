@@ -10,12 +10,21 @@ void PlayScene::UpdateScene()
 {
 	end = clock();
 	ftime = ((float)(end - start) / CLOCKS_PER_SEC);
-	if (ftime >= 1.5)
+	if (ftime >= 0.2)
 	{
 		if (nullptr != blockObject)
 		{
+			Block collisionCheckBlock = *blockObject;
 			// 블럭들이 틱마다 내려와야함
-			blockObject->MoveDown();
+			collisionCheckBlock.MoveDown();
+			if (collisionCheckBlock.CheckCollision(tMap, collisionCheckBlock.getXpos(), collisionCheckBlock.getYpos()))
+				blockObject->MoveDown();
+			// 멈춘 후
+			else
+			{
+				BuildBlock();
+				CreateBlock();
+			}
 			blockObject->Render(tMap, blockObject->getXpos(), blockObject->getYpos());
 			tMap->DrawMap();
 		}
@@ -35,8 +44,10 @@ void PlayScene::UpdateScene()
 	// 내가 입력하는거 처리
 	CheckKeyInput();
 	
-	// 블럭 벽면 충돌처리
-	// 블럭이 바닥에 다다랐을 때 체크해야함
+	// 블럭 벽면 충돌처리 <해결>
+	
+	// 블럭이 바닥에 다다랐을 때 체크해야함 <임시해결>
+	
 	// -> 매 프레임 맵 배열을 전체 체크하면서
 	// -> 블럭들이 채워졌다면 해당 행 지워주고 내려주는 식으로
 	tMap->DrawMap();
@@ -47,6 +58,23 @@ void PlayScene::DrawScene()
 	tMap->InitMap();
 	tMap->DrawMap();
 	DrawScoreBoardUI();
+}
+
+void PlayScene::BuildBlock()
+{
+	for (int i = 0; i < 4; ++i)
+	{
+		for (int j = 0; j < 4; ++j)
+		{
+			int X = j + blockObject->getXpos();
+			int Y = i + blockObject->getYpos();
+
+			if (blockObject->getShape(blockObject->getRotateCount(), j, i) == 1)
+			{
+				tMap->setMap(X, Y, 3);
+			}
+		}
+	}
 }
 
 void PlayScene::CreateBlock()
