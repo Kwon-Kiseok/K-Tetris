@@ -4,7 +4,7 @@
 Block_S::Block_S()
 {
 	rotate_count = 0;
-	color = OBJECT_COLOR::GREEN;
+	color = OBJECT_COLOR::BLUE;
 
 	for (int i = 0; i < 4; ++i)
 	{

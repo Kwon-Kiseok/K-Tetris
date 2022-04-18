@@ -20,6 +20,11 @@ int Block::getRotateCount()
 	return rotate_count;
 }
 
+OBJECT_COLOR Block::getColor()
+{
+	return color;
+}
+
 void Block::Rotate()
 {
 	rotate_count = (rotate_count + 1) % 4;
@@ -48,7 +53,6 @@ void Block::Render(TetrisMap *map, int screen_x, int screen_y)
 		{
 			if (map != nullptr)
 			{
-				//
 				if (map->getMap(j, i) == 1)
 				{
 					map->setMap(j, i, 0);

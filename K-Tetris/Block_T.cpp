@@ -4,7 +4,7 @@
 Block_T::Block_T()
 {
 	rotate_count = 0;
-	color = OBJECT_COLOR::GREEN;
+	color = OBJECT_COLOR::LIGHTMAGENTA;
 
 	for (int i = 0; i < 4; ++i)
 	{

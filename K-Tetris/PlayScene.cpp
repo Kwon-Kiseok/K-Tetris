@@ -34,8 +34,6 @@ void PlayScene::UpdateScene()
 	// 게임 종료
 	CheckGameEnd();
 
-	if (GetButtonDown(EKeyCode::KEYCODE_ENTER))
-		DeleteBlock();
 	// 현재 컨트롤 중인 블럭이 없다면
 	// 컨트롤할 블럭이 랜덤 생성 및 배정
 	if (nullptr == blockObject)
@@ -90,6 +88,9 @@ void PlayScene::CreateBlock()
 	else if (select == 4) blockObject = new Block_S();
 	else if (select == 5) blockObject = new Block_T();
 	else if (select == 6) blockObject = new Block_Z();
+
+	SetColor(blockObject->getColor(), OBJECT_COLOR::BLACK);
+	
 	ShowNextBlock();
 
 	// 맵 중앙에 나오도록
