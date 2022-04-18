@@ -57,6 +57,7 @@ void PlayScene::DrawScene()
 	tMap->InitMap();
 	tMap->DrawMap();
 	DrawScoreBoardUI();
+	DrawManualUI();
 }
 
 void PlayScene::BuildBlock()

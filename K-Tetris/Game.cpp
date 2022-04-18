@@ -50,7 +50,7 @@ void Game::handleEvents()
 
 void Game::clean()
 {
-    SetColor(OBJECT_COLOR::DARKGRAY, OBJECT_COLOR::WHITE);
+    gotoXY(20, 30);
     std::cout << "Cleaning Game" << std::endl;
     this->DestroyInstance();
     SceneManager::DestroyInstance();
