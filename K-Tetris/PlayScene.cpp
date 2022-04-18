@@ -50,6 +50,7 @@ void PlayScene::UpdateScene()
 	// -> 블럭들이 채워졌다면 해당 행 지워주고 내려주는 식으로
 	tMap->DeleteLinear();
 	tMap->DrawMap();
+	PrintScore();
 }
 
 void PlayScene::DrawScene()
@@ -113,6 +114,11 @@ void PlayScene::DeleteBlock()
 void PlayScene::CheckGameEnd()
 {
 	if (GetButtonDown(EKeyCode::KEYCODE_ESC))
+	{
+		Game::GetInstance()->SetGameRunning();
+	}
+
+	if (tMap->CheckFullStack())
 	{
 		Game::GetInstance()->SetGameRunning();
 	}

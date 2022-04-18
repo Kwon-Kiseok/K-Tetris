@@ -2,6 +2,7 @@
 #include "TetrisMap.h"
 #include "UI.h"
 #include <locale.h>
+#include "Game.h"
 
 void TetrisMap::InitMap()
 {
@@ -72,8 +73,21 @@ void TetrisMap::DeleteLinear()
 					map[y][x] = map[y - 1][x];
 				}
 			}
+			AddScore();
 		}
 	}
+}
+
+bool TetrisMap::CheckFullStack()
+{
+	for (int i = 1; i < MAX_COL + 1; ++i)
+	{
+		if (map[2][i] == 3)
+		{
+			return true;
+		}
+	}
+	return false;
 }
 
 int TetrisMap::setMap(int xpos, int ypos, int symbol)

@@ -16,6 +16,7 @@ public:
 	void InitMap();
 	void DrawMap();
 	void DeleteLinear();
+	bool CheckFullStack();
 	int setMap(int xpos, int ypos, int symbol);
 	int getMap(int xpos, int ypos);
 };

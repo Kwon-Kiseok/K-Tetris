@@ -3,13 +3,14 @@
 class Game
 {
 private:
-	Game() : bRunning(true), bPlaying(false) {};
-	~Game() {};
+	Game() : bRunning(true), bPlaying(false), score(0) {}
+	~Game() {}
 
 	static Game* instance;
 
 	bool bRunning;
 	bool bPlaying;
+	int score;
 public:
 	static Game* GetInstance();
 	static void DestroyInstance();
@@ -21,4 +22,7 @@ public:
 	void clean();	// 종료 전 정보 초기화
 	bool CheckGameRunning();	// 게임 종료 체크
 	void SetGameRunning();
+
+	int getScore();
+	void setScore(int value);
 };

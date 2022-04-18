@@ -1,5 +1,6 @@
 #include "stdafx.h"
 #include "UI.h"
+#include "Game.h"
 
 using std::cout;
 
@@ -11,7 +12,6 @@ void DrawScoreBoardUI()
 	gotoXY(4, 1); cout << "NEXT";
 	SetColor(OBJECT_COLOR::GREEN, OBJECT_COLOR::BLACK);
 	gotoXY(55, 1); cout << "SCORE";
-	gotoXY(55, 2); cout << "123";
 }
 
 void DrawManualUI()
@@ -37,4 +37,16 @@ void CursorView()
 	cursorInfo.dwSize = 1; // 커서 굵기 ( 1 ~ 100 )
 	cursorInfo.bVisible = FALSE; // 커서 보이기
 	SetConsoleCursorInfo(GetStdHandle(STD_OUTPUT_HANDLE), &cursorInfo);
+}
+
+void PrintScore()
+{
+	Game* game = Game::GetInstance();
+	gotoXY(55, 2); std::cout << game->getScore();
+}
+
+void AddScore()
+{
+	Game* game = Game::GetInstance();
+	game->setScore(300);
 }
