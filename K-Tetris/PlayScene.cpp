@@ -30,7 +30,6 @@ void PlayScene::UpdateScene()
 		}
 		start = clock();
 	}
-	// input
 	// 게임 종료
 	CheckGameEnd();
 
@@ -39,15 +38,11 @@ void PlayScene::UpdateScene()
 	if (nullptr == blockObject)
 		CreateBlock();
 
-	// 내가 입력하는거 처리
+	// 입력처리
 	CheckKeyInput();
-	
-	// 블럭 벽면 충돌처리 <해결>
-	
-	// 블럭이 바닥에 다다랐을 때 체크해야함 <임시해결>
-	
-	// -> 매 프레임 맵 배열을 전체 체크하면서
-	// -> 블럭들이 채워졌다면 해당 행 지워주고 내려주는 식으로
+
+	// 매 프레임 맵 배열을 전체 체크하면서
+	// 블럭들이 채워졌다면 해당 행 지워주고 내려주는 식으로
 	tMap->DeleteLinear();
 	tMap->DrawMap();
 	PrintScore();
@@ -63,6 +58,7 @@ void PlayScene::DrawScene()
 
 void PlayScene::BuildBlock()
 {
+
 	for (int i = 0; i < 4; ++i)
 	{
 		for (int j = 0; j < 4; ++j)

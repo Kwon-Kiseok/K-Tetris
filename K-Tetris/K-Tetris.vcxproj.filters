@@ -16,129 +16,153 @@
     <Filter Include="PCH">
       <UniqueIdentifier>{47dc26b9-6bc2-4b39-945c-77f1eefc4b88}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\Block">
+      <UniqueIdentifier>{9688b04a-799f-4711-9d09-90b006aec606}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Framework">
+      <UniqueIdentifier>{6577b53a-c3bf-4d29-8609-d19223df3cdc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\UI">
+      <UniqueIdentifier>{dbd61262-3689-4763-bc29-c90597e8a437}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Scene">
+      <UniqueIdentifier>{4b69ca67-a0a2-4140-bec3-003fdb55c147}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\Block">
+      <UniqueIdentifier>{22cd5965-007c-4e92-9865-7a00b88993e6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\Framework">
+      <UniqueIdentifier>{db31641d-f095-4916-bbba-1d1ae8b149c2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\UI">
+      <UniqueIdentifier>{7b2f0b23-0726-4032-bcb5-796d45c834ed}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\Scene">
+      <UniqueIdentifier>{6d12810c-0bf3-476f-8861-ac98ab3cec59}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Game.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
     <ClInclude Include="stdafx.h">
       <Filter>PCH</Filter>
-    </ClInclude>
-    <ClInclude Include="UI.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="GameObject.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="Block.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="Color.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="InputSystem.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="MenuScene.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="SceneManager.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="Scene.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="PlayScene.h">
-      <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="TetrisMap.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
+    <ClInclude Include="Block.h">
+      <Filter>헤더 파일\Block</Filter>
+    </ClInclude>
     <ClInclude Include="Block_I.h">
-      <Filter>헤더 파일</Filter>
+      <Filter>헤더 파일\Block</Filter>
     </ClInclude>
     <ClInclude Include="Block_J.h">
-      <Filter>헤더 파일</Filter>
+      <Filter>헤더 파일\Block</Filter>
     </ClInclude>
     <ClInclude Include="Block_L.h">
-      <Filter>헤더 파일</Filter>
+      <Filter>헤더 파일\Block</Filter>
     </ClInclude>
     <ClInclude Include="Block_O.h">
-      <Filter>헤더 파일</Filter>
+      <Filter>헤더 파일\Block</Filter>
     </ClInclude>
     <ClInclude Include="Block_S.h">
-      <Filter>헤더 파일</Filter>
+      <Filter>헤더 파일\Block</Filter>
     </ClInclude>
     <ClInclude Include="Block_T.h">
-      <Filter>헤더 파일</Filter>
+      <Filter>헤더 파일\Block</Filter>
     </ClInclude>
     <ClInclude Include="Block_Z.h">
-      <Filter>헤더 파일</Filter>
+      <Filter>헤더 파일\Block</Filter>
     </ClInclude>
     <ClInclude Include="Blocks.h">
-      <Filter>헤더 파일</Filter>
+      <Filter>헤더 파일\Block</Filter>
+    </ClInclude>
+    <ClInclude Include="Color.h">
+      <Filter>헤더 파일\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UI.h">
+      <Filter>헤더 파일\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="Game.h">
+      <Filter>헤더 파일\Framework</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObject.h">
+      <Filter>헤더 파일\Framework</Filter>
+    </ClInclude>
+    <ClInclude Include="InputSystem.h">
+      <Filter>헤더 파일\Framework</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneManager.h">
+      <Filter>헤더 파일\Framework</Filter>
+    </ClInclude>
+    <ClInclude Include="Scene.h">
+      <Filter>헤더 파일\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayScene.h">
+      <Filter>헤더 파일\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="MenuScene.h">
+      <Filter>헤더 파일\Scene</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="Game.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
     <ClCompile Include="stdafx.cpp">
       <Filter>PCH</Filter>
-    </ClCompile>
-    <ClCompile Include="UI.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="GameObject.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="Block.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="Color.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="InputSystem.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="MenuScene.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="SceneManager.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="Scene.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="PlayScene.cpp">
-      <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="TetrisMap.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="Block.cpp">
+      <Filter>소스 파일\Block</Filter>
+    </ClCompile>
     <ClCompile Include="Block_I.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>소스 파일\Block</Filter>
     </ClCompile>
     <ClCompile Include="Block_J.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>소스 파일\Block</Filter>
     </ClCompile>
     <ClCompile Include="Block_L.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>소스 파일\Block</Filter>
     </ClCompile>
     <ClCompile Include="Block_O.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>소스 파일\Block</Filter>
     </ClCompile>
     <ClCompile Include="Block_S.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>소스 파일\Block</Filter>
     </ClCompile>
     <ClCompile Include="Block_T.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>소스 파일\Block</Filter>
     </ClCompile>
     <ClCompile Include="Block_Z.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>소스 파일\Block</Filter>
+    </ClCompile>
+    <ClCompile Include="Color.cpp">
+      <Filter>소스 파일\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="UI.cpp">
+      <Filter>소스 파일\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="InputSystem.cpp">
+      <Filter>소스 파일\Framework</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneManager.cpp">
+      <Filter>소스 파일\Framework</Filter>
+    </ClCompile>
+    <ClCompile Include="GameObject.cpp">
+      <Filter>소스 파일\Framework</Filter>
+    </ClCompile>
+    <ClCompile Include="Game.cpp">
+      <Filter>소스 파일\Framework</Filter>
+    </ClCompile>
+    <ClCompile Include="MenuScene.cpp">
+      <Filter>소스 파일\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayScene.cpp">
+      <Filter>소스 파일\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="Scene.cpp">
+      <Filter>소스 파일\Scene</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
