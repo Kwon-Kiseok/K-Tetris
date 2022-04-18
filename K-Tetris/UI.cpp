@@ -11,10 +11,18 @@ void DrawScoreBoardUI()
 	gotoXY(4, 1); cout << "NEXT";
 	SetColor(OBJECT_COLOR::GREEN, OBJECT_COLOR::BLACK);
 	gotoXY(55, 1); cout << "SCORE";
-	SetColor(OBJECT_COLOR::LIGHTBLUE, OBJECT_COLOR::BLACK);
-	gotoXY(55, 8); cout << "LINES";
-	SetColor(OBJECT_COLOR::LIGHTGRAY, OBJECT_COLOR::BLACK);
-	gotoXY(55, 15); cout << "LEVLE";
+	gotoXY(55, 2); cout << "123";
+}
+
+void DrawManualUI()
+{
+	gotoXY(4, 25); cout << "Manual";
+
+	gotoXY(4, 27); std::wcout << L"¡ç : A";
+	gotoXY(4, 28); std::wcout << L"¡æ : D";
+	gotoXY(4, 29); std::wcout << L"¡é : S";
+	gotoXY(14, 27); cout << "Rotation : R";
+	gotoXY(14, 28); cout << "Exit : ESC";
 }
 
 void gotoXY(int x, int y)

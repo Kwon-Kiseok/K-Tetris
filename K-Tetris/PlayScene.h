@@ -17,9 +17,11 @@ public:
 	virtual void UpdateScene();
 	virtual void DrawScene();
 
+	void BuildBlock();
 	void CreateBlock();
 	void DeleteBlock();
 	void CheckGameEnd();
 	void ShowNextBlock();
+	void CheckKeyInput();
 };
 

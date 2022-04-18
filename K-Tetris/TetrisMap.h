@@ -15,6 +15,7 @@ public:
 
 	void InitMap();
 	void DrawMap();
+	void DeleteLinear();
 	int setMap(int xpos, int ypos, int symbol);
 	int getMap(int xpos, int ypos);
 };

@@ -144,6 +144,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Block.h" />
+    <ClInclude Include="Blocks.h" />
     <ClInclude Include="Block_I.h" />
     <ClInclude Include="Block_J.h" />
     <ClInclude Include="Block_L.h" />
