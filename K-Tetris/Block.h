@@ -222,5 +222,6 @@ public:
 	virtual void MoveLeft();
 	virtual void MoveRight();
 	virtual void Render(TetrisMap *map, int screen_x, int screen_y);
+	virtual bool CheckCollision(TetrisMap *map, int x, int y);
 };
 

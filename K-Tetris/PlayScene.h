@@ -21,5 +21,6 @@ public:
 	void DeleteBlock();
 	void CheckGameEnd();
 	void ShowNextBlock();
+	void CheckKeyInput();
 };
 

@@ -37,16 +37,16 @@ void Block::MoveRight()
 
 void Block::Render(TetrisMap *map, int screen_x, int screen_y)
 {
-	for (int i = 1; i < MAX_ROW; ++i)
+	for (int i = 0; i < MAX_ROW + 1; ++i)
 	{
-		for (int j = 1; j < MAX_COL; ++j)
+		for (int j = 0; j < MAX_COL + 1; ++j)
 		{
 			if (map != nullptr)
 			{
 				//
-				if (map->getMap(i, j) == 1)
+				if (map->getMap(j, i) == 1)
 				{
-					map->setMap(i, j, 0);
+					map->setMap(j, i, 0);
 				}
 			}
 		}
@@ -72,4 +72,24 @@ void Block::Render(TetrisMap *map, int screen_x, int screen_y)
 		screen_y++;
 		gotoXY(screen_x, screen_y);
 	}
+}
+
+bool Block::CheckCollision(TetrisMap* map, int x, int y)
+{
+	for (int i = 0; i < 4; ++i)
+	{
+		for (int j = 0; j < 4; ++j)
+		{
+			int X = j + x;
+			int Y = i + y;
+
+			int blockElem = getShape(rotate_count, j, i);
+
+			if (blockElem != 1)
+				continue;
+			if (map->getMap(X, Y) == 2)
+				return false;
+		}
+	}
+	return true;
 }
