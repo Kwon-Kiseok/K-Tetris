@@ -12,7 +12,7 @@ private:
 	clock_t start, end;
 	float ftime;
 public:
-	PlayScene() : blockObject(nullptr), start(clock()) {}
+	PlayScene() : blockObject(nullptr), start(clock()), end(0), ftime(0) {}
 	~PlayScene() { delete blockObject; blockObject = nullptr; }
 	virtual void UpdateScene();
 	virtual void DrawScene();

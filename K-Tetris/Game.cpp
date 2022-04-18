@@ -50,8 +50,8 @@ void Game::handleEvents()
 
 void Game::clean()
 {
-    gotoXY(20, 30);
-    std::cout << "Cleaning Game" << std::endl;
+    gotoXY(28, 30);
+    std::cout << "Game Over" << std::endl;
     this->DestroyInstance();
     SceneManager::DestroyInstance();
 }
@@ -64,4 +64,14 @@ bool Game::CheckGameRunning()
 void Game::SetGameRunning()
 {
     bRunning = !bRunning;
+}
+
+int Game::getScore()
+{
+    return score;
+}
+
+void Game::setScore(int value)
+{
+    score += value;
 }
